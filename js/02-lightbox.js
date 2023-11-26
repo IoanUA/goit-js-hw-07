@@ -5,10 +5,6 @@ console.log(galleryItems);
 
 
 
-
-
-
-
 const container = document.querySelector(".gallery")
 
 container.insertAdjacentHTML("beforeend", createMarkup(galleryItems))
