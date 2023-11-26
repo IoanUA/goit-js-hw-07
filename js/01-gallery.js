@@ -31,8 +31,7 @@ function handleClick(event) {
     };
 
     const currentImg = event.target.dataset.source;
-    // console.log(originalImageURL);
-    
+
     const lightBox = basicLightbox.create(
         `<img src="${currentImg}" width="800" height="600"/>`
     );
