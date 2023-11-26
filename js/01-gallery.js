@@ -47,6 +47,3 @@ function handleClick(event) {
 
 }
 
-
-        
-5
