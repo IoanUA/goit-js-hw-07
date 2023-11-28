@@ -33,17 +33,18 @@ function handleClick(event) {
     const currentImg = event.target.dataset.source;
 
     const lightBox = basicLightbox.create(
-        `<img src="${currentImg}" width="800" height="600"/>`
+        `<img src="${currentImg}" width="800" height="600"/>`,
+        {
+            onShow: (instance) => {document.addEventListener('keydown', closeLightBox);},
+            onClose: (instance) => { document.removeEventListener('keydown', closeLightBox);}
+        }
     );
     lightBox.show();
 
     function closeLightBox (event)  {
             if (event.key === 'Escape') {
-                lightBox.close();
-                document.removeEventListener('keydown', closeLightBox);
+                lightBox.close();  
             }
         };
-    document.addEventListener('keydown', closeLightBox);
-
 }
 
